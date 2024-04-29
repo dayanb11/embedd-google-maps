@@ -10,14 +10,15 @@ function App() {
 
   function DisplayMyHome(){
     toggleBool();
-    alert('DisplayMyHome '+ myBool)
+   // alert('DisplayMyHome '+ myBool)
   }
 
- return(<div className='container_div'>
+ return(<div className='container_div'><h1>Press button to see my Home Address</h1>
   <div className='inner_div'>
     <button className='Button' onClick={DisplayMyHome}>ShowMyHome</button>
   </div>
+  <div className={myBool?'hidden':''}>
   <MyHome myBool></MyHome>
-  </div>);
+  </div></div>);
 }
 export default App;
